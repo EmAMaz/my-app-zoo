@@ -1,0 +1,28 @@
+<div class="navigation col-lg-12">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a [routerLink]="['/home']" class="navbar-brand">{{title}}</a>
+      </div>
+      
+      <ul class="navbar-nav">
+        <li class="nav-item"><a [routerLink]="['/home']" [routerLinkActive]="['active']" class="nav-link"><span class="bi bi-house-fill"></span>Inicio</a></li>
+        <li class="nav-item"><a [routerLink]="['/animales']" [routerLinkActive]="['active']" class="nav-link"><span class="bi bi-archive-fill"></span>Animales</a></li>
+        <li class="nav-item"><a [routerLink]="['/cuidadores']" [routerLinkActive]="['active']" class="nav-link"><span class="bi bi-people-fill"></span>Cuidadores</a></li>
+        <li class="nav-item"><a [routerLink]="['/tienda']" [routerLinkActive]="['active']" class="nav-link"><span class="bi bi-bag-check-fill"></span>Tienda</a></li>
+        <li class="nav-item"><a [routerLink]="['/contacto']" [routerLinkActive]="['active']" class="nav-link"><span class="bi bi-person-fill"></span>Contacto</a></li>
+        <li class="hidden">
+          <span *ngIf="emailContacto">
+            <strong>Email de contacto:</strong>{{emailContacto}}
+            <button>Eliminar email de contacto</button>
+          </span>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+</div>
+
+<div class="col-lg-11">
+  <router-outlet></router-outlet>
+</div>
